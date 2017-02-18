@@ -143,12 +143,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('#exampleAddRow').DataTable();
     //$('#exampleFormModal').modal('show');
-    $("#Cedula").mask("999-9999999-9",{placeholder:""});
-    
-
-
-   
-});
+    $("#Cedula").mask("999-9999999-9",{placeholder:""}); });
 </script>
 
 
@@ -186,10 +181,6 @@ $(document).ready(function(){
                 $('.get-permisos').on('click', function(){
                 
                     rol_id = $(this).attr('rol_id');
-                    
-                    
-
-
                     $.ajax({
                         url : '<?php echo e(URL::to("/Catalogo/Usuarios/permisos")); ?>',
                         type : 'GET',

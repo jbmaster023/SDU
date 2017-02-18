@@ -137,12 +137,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('#exampleAddRow').DataTable();
     //$('#exampleFormModal').modal('show');
-    $("#Cedula").mask("999-9999999-9",{placeholder:""});
-    
-
-
-   
-});
+    $("#Cedula").mask("999-9999999-9",{placeholder:""}); });
 </script>
 
 
@@ -193,6 +188,9 @@ $(document).ready(function(){
                         });
                         $('#select-permisos').multiSelect('refresh');
                         //
+
+
+
                     });
                     //$('#select-permisos').val('');
                 });
