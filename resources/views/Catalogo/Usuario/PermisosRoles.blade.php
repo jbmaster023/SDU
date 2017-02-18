@@ -16,7 +16,7 @@
         </div>
         <div class="modal-footer">
 
-          <a href="#" data-dismiss="modal" class="btn btn-default">Cerrar</a>
+          <a href="#" data-dismiss="modal" onClick="window.location.reload()" class="btn btn-default">Cerrar</a>
         </div>
       </div>
     </div>

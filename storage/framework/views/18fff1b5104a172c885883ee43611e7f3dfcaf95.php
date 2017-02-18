@@ -62,10 +62,11 @@
 
                 </td>
                 <td><?php echo e($Usuario->empleados->Personas->Cedula); ?></td>
+                <?php $__currentLoopData = $Usuario->roles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $news_data): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+                <td><?php echo e($news_data->name); ?></td>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?> 
 
                 
-                <td>
-                </td>
               
                 <td class="actions">
                 

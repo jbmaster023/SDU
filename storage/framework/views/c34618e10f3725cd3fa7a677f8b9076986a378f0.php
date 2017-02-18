@@ -3,8 +3,10 @@
       <div>
         <div>
 
-
+      
           <ul class="site-menu" data-plugin="menu">
+
+          <?php if(Entrust::can('Facturacion')): ?>
             <li class="site-menu-category">FACTURACION</li>
             <li class="site-menu-item">
               <a class="animsition-link" href="<?php echo e(route('Facturacion.index')); ?>">
@@ -33,6 +35,8 @@
                 <span class="site-menu-title" title="Eliminar o Modificar Factura">Eliminar o Modificar Factura</span>
               </a>
             </li>
+
+             <?php endif; ?>
    
 
      

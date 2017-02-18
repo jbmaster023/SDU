@@ -3,6 +3,7 @@
 namespace App;
 
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+use Zizaco\Entrust\HasRole;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -39,6 +40,7 @@ class User extends Authenticatable
     }
 
 
+
         public function roles()
     {
         return $this->belongsToMany('App\Role','role_user');
@@ -49,6 +51,9 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($value);
     }
+
+
+
 
 
 }

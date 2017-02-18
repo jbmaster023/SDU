@@ -62,12 +62,12 @@
                 {{$Usuario->empleados->Personas->Nombre}} {{$Usuario->empleados->Personas->Apellidos}}
                 </td>
                 <td>{{$Usuario->empleados->Personas->Cedula}}</td>
+                @foreach($Usuario->roles as $news_data)
+                <td>{{$news_data->name}}</td>
+                @endforeach 
 
-                {{-- @foreach ($Usuario->roles as $rol) --}}
-                <td>{{-- 
-                	{{$rol->name}} --}}
-                </td>
-              {{--   @endforeach --}}
+                
+              
                 <td class="actions">
                 
                 <button type="button" data-target="#Editar{{$Usuario->id}}" data-toggle="modal" class="btn btn-success ladda-button waves-effect"><i class="icon md-link" aria-hidden="true"></i> Editar

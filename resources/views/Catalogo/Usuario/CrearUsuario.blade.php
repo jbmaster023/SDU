@@ -72,7 +72,7 @@
            <select class="form-control"  name="Permisos">
             <option value="">Permisos</option>
                @foreach ($Roles as $rol) 
-                 <option>{{$rol->name}}</option>
+                 <option value="{{$rol->id}}">{{$rol->name}}</option>
                @endforeach  
           </select>
         </div>

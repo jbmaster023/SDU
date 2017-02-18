@@ -29,11 +29,7 @@ class UsuariosController extends Controller
        $Usuarios   = User::with('empleados.Personas','roles')->get();
        $Datos =$Usuarios;
 
-
-
-       //dd($Usuarios);
-
-       return view('Catalogo.Usuario.GestionDeUsuarios',compact('Provincias','Roles','Usuarios','Datos'));
+        return view('Catalogo.Usuario.GestionDeUsuarios',compact('Provincias','Roles','Usuarios','Datos'));
     }
 
     /**
@@ -54,6 +50,8 @@ class UsuariosController extends Controller
      */
     public function store(Requests\CrearUsuario $request)
     {
+
+        //dd($request->all());
 
         $validatorCedula = Validator::make($request->all(), [
             'Cedula'        =>'required|unique:Personas'
@@ -80,6 +78,7 @@ class UsuariosController extends Controller
         }
 
          
+
        $VerificarEmpleado = Empleados::where('Personas_id',$Persona->id)->count();
         
        if($VerificarEmpleado == 0){
@@ -93,6 +92,7 @@ class UsuariosController extends Controller
         $input['Empleados_id']= $Empleado->id ;
 
         $User = User::create($input);
+        $User->attachRole(Role::find($request->Permisos));
 
         \Session::flash('success', 'El usuario se creo coractamente.');
         return \Redirect::route('GestionDeUsuarios.index');

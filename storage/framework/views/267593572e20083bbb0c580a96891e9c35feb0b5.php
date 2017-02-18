@@ -71,7 +71,7 @@
            <select class="form-control"  name="Permisos">
             <option value="">Permisos</option>
                <?php $__currentLoopData = $Roles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rol): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?> 
-                 <option><?php echo e($rol->name); ?></option>
+                 <option value="<?php echo e($rol->id); ?>"><?php echo e($rol->name); ?></option>
                <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>  
           </select>
         </div>
