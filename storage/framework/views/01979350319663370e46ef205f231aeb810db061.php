@@ -64,8 +64,13 @@
 
                   
                 </td>
+
+
+                
               
                 <td class="actions">
+
+                 <?php if($Role->name != "FullControl"): ?>
                 
                 <button type="button" data-target="#Permisos" rol_id="<?php echo e($Role->id); ?>" data-toggle="modal" class="btn btn-info waves-effect ladda-button waves-effect get-permisos"><i class="icon md-link" aria-hidden="true"></i> Permisos
                 </button> 
@@ -75,9 +80,11 @@
 
                 <button type="button" data-target="#EliminarRol<?php echo e($Role->id); ?>" data-toggle="modal" class="btn btn-danger waves-effect"><i class="icon md-link" aria-hidden="true"></i> Eliminar
                 </button>
-
+   <?php endif; ?>
               
                 </td>
+
+              
 
               </tr>
            <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?> 
@@ -204,7 +211,7 @@ $(document).ready(function(){
         </script>
   
 
-  <?php echo e(Html::script('https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js')); ?>
+<?php echo e(Html::script('js/jquery.dataTables.min.js')); ?>
 
 
 

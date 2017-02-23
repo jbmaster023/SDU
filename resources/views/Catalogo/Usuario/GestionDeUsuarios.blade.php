@@ -69,12 +69,18 @@
                 
               
                 <td class="actions">
+
+                 @if($Usuario->usuario != "Admin")
                 
                 <button type="button" data-target="#Editar{{$Usuario->id}}" data-toggle="modal" class="btn btn-success ladda-button waves-effect"><i class="icon md-link" aria-hidden="true"></i> Editar
                 </button>
 
+               
+
                 <button type="button" data-target="#Eliminar{{$Usuario->id}}" data-toggle="modal" class="btn btn-danger waves-effect"><i class="icon md-link" aria-hidden="true"></i> Eliminar
                 </button>
+
+                @endif
 
               
                 </td>
@@ -137,7 +143,7 @@ $(document).ready(function(){
 </script>
   
 
-  {{ Html::script('https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js') }}
+  {{ Html::script('js/jquery.dataTables.min.js') }}
 
 
 

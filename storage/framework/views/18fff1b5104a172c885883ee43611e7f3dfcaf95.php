@@ -69,12 +69,18 @@
                 
               
                 <td class="actions">
+
+                 <?php if($Usuario->usuario != "Admin"): ?>
                 
                 <button type="button" data-target="#Editar<?php echo e($Usuario->id); ?>" data-toggle="modal" class="btn btn-success ladda-button waves-effect"><i class="icon md-link" aria-hidden="true"></i> Editar
                 </button>
 
+               
+
                 <button type="button" data-target="#Eliminar<?php echo e($Usuario->id); ?>" data-toggle="modal" class="btn btn-danger waves-effect"><i class="icon md-link" aria-hidden="true"></i> Eliminar
                 </button>
+
+                <?php endif; ?>
 
               
                 </td>
@@ -141,7 +147,7 @@ $(document).ready(function(){
 </script>
   
 
-  <?php echo e(Html::script('https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js')); ?>
+  <?php echo e(Html::script('js/jquery.dataTables.min.js')); ?>
 
 
 

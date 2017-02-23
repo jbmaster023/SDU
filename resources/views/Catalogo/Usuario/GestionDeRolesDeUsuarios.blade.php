@@ -63,8 +63,13 @@
                 {{$Role->name}}
                   
                 </td>
+
+
+                
               
                 <td class="actions">
+
+                 @if($Role->name != "FullControl")
                 
                 <button type="button" data-target="#Permisos" rol_id="{{$Role->id}}" data-toggle="modal" class="btn btn-info waves-effect ladda-button waves-effect get-permisos"><i class="icon md-link" aria-hidden="true"></i> Permisos
                 </button> 
@@ -74,9 +79,12 @@
 
                 <button type="button" data-target="#EliminarRol{{$Role->id}}" data-toggle="modal" class="btn btn-danger waves-effect"><i class="icon md-link" aria-hidden="true"></i> Eliminar
                 </button>
-
+               
+                @endif
               
                 </td>
+
+              
 
               </tr>
            @endforeach 
@@ -198,7 +206,7 @@ $(document).ready(function(){
         </script>
   
 
-  {{ Html::script('https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js') }}
+{{ Html::script('js/jquery.dataTables.min.js') }}
 
 
 

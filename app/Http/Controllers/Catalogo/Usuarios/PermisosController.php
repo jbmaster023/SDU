@@ -12,6 +12,8 @@ use App\Role;
 
 class PermisosController extends Controller
 {
+
+    
    
 
 	/**

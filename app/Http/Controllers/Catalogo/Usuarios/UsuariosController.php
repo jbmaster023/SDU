@@ -29,6 +29,8 @@ class UsuariosController extends Controller
        $Usuarios   = User::with('empleados.Personas','roles')->get();
        $Datos =$Usuarios;
 
+      // dd($Usuarios);
+
         return view('Catalogo.Usuario.GestionDeUsuarios',compact('Provincias','Roles','Usuarios','Datos'));
     }
 
